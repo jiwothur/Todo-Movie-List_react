@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import {HashRouter, Route} from "react-router-dom";
+import TodoList from "./components/TodoList";
+import MovieData from "./components/MovieData";
+import Navigation from "./components/Navigation";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component{
+
+  render(){
+    return (
+    <HashRouter>
+    <Navigation />
+    <Route path="/" exact={true} component={TodoList}/>
+    <Route path ="/movie" component={MovieData}/>
+  </HashRouter>
+    )
+  }
 }
+
 
 export default App;

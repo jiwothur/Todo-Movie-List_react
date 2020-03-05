@@ -1,0 +1,16 @@
+.Link{
+    height: 75%;
+    font-family: "Times New Roman", Times, serif;
+    color:black;
+    padding-top: 2%;
+    background: white;
+}
+.Link #name{
+    font-weight: 900;
+    margin-right: 32%;
+    margin-left: 19%;
+}
+a { 
+     text-decoration: none;
+}
+a:visited {color: black; }
